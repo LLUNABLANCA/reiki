@@ -3,75 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Nombre</title>
+    <title>El Portal de la Luz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f8f0e3; /* Color pastel de fondo */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f3ff; /* Fondo suave */
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, #e1bee7, #f8bbd0); /* Colores pastel */
+            padding: 20px;
+            text-align: center;
+            color: #4a148c; /* Color de texto más oscuro para contraste */
+        }
+        h1 {
+            font-size: 2.5em;
             margin: 0;
         }
-
-        h1 {
-            color: #606c88;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        form {
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        label {
-            font-size: 1.2rem;
-            color: #606c88;
-        }
-
-        input[type="text"] {
-            width: 80%;
-            padding: 10px;
+        nav {
             margin-top: 10px;
-            border: 2px solid #b3cdd1;
-            border-radius: 5px;
-            font-size: 1rem;
-            outline: none;
-            transition: all 0.3s;
         }
-
-        input[type="text"]:focus {
-            border-color: #8ac6d1;
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #4a148c;
+            font-weight: bold;
+            transition: color 0.3s;
         }
-
-        button {
-            margin-top: 20px;
+        nav a:hover {
+            color: #d81b60; /* Color rosado al pasar el ratón */
+        }
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 8px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        section:hover {
+            transform: translateY(-5px);
+        }
+        h2 {
+            color: #7b1fa2; /* Lila suave */
+            font-weight: 500;
+            margin-top: 0;
+        }
+        .welcome {
+            font-size: 1.2em;
+            margin-top: 10px;
+            font-weight: 300;
+        }
+        .cta {
+            display: inline-block;
             padding: 10px 20px;
-            font-size: 1rem;
-            background-color: #8ac6d1; /* Botón en tonos pastel */
+            background-color: #f8bbd0; /* Botón rosado */
             color: #ffffff;
-            border: none;
+            text-decoration: none;
             border-radius: 5px;
-            cursor: pointer;
+            font-weight: bold;
             transition: background-color 0.3s;
         }
-
-        button:hover {
-            background-color: #6bb4b8;
+        .cta:hover {
+            background-color: #d81b60; /* Color rosado oscuro al pasar el ratón */
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #e1bee7; /* Fondo del pie */
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            color: #4a148c; /* Color de texto oscuro */
+        }
+        .quote {
+            font-style: italic;
+            color: #555;
+            margin: 20px 0;
+            border-left: 4px solid #e1bee7; /* Lila suave */
+            padding-left: 10px;
+            background-color: #f3e5f5; /* Fondo suave para citas */
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .inspiration {
+            text-align: center;
+            background-color: #f8bbd0; /* Fondo pastel */
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 8px;
+        }
+        .inspiration p {
+            margin: 0;
+            font-size: 1.5em;
+            color: white;
+        }
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        .image-gallery img {
+            max-width: 30%; /* Ajusta el tamaño según sea necesario */
+            margin: 10px;
+            border-radius: 8px; /* Bordes redondeados */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .image-gallery img:hover {
+            transform: scale(1.05); /* Efecto al pasar el ratón */
+        }
+        @media (max-width: 768px) {
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
         }
     </style>
 </head>
 <body>
-    <form action="#">
-        <h1>¡Hola! Dime tu nombre</h1>
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre aquí">
-        <button type="submit">Enviar</button>
-    </form>
+    <header>
+        <h1>El Portal de la Luz</h1>
+        <nav>
+            <a href="#que-es-reiki">¿Qué es el Reiki?</a>
+            <a href="#terapias">Terapias</a>
+            <a href="#sobre-mi">Sobre mí</a>
+            <a href="#contacto">Contacto</a>
+            <a href="#galeria">Galería</a> <!-- Enlace a la galería -->
+        </nav>
+    </header>
+    
+    <section id="inicio">
+        <h2>Bienvenida</h2>
+        <p class="welcome">Conéctate con tu energía interior y encuentra la paz que siempre ha estado en ti.</p>
+        <a href="#que-es-reiki" class="cta">Descubre el Reiki</a>
+    </section>
+
+    <section class="inspiration">
+        <p>"La energía sigue al pensamiento. Piensa en lo que quieres y atrae eso a tu vida."</p>
+    </section>
+
+    <section id="que-es-reiki">
+        <h2>¿Qué es el Reiki?</h2>
+        <p>El Reiki es una práctica ancestral de origen japonés, basada en la transmisión de energía universal a través de las manos del terapeuta. Esta energía, conocida como "ki" o "chi", fluye a través del cuerpo y ayuda a desbloquear y equilibrar los centros energéticos, promoviendo una sanación profunda. Es una técnica no invasiva y natural que potencia el bienestar y la armonía en quien lo recibe.</p>
+        <p class="quote">"La sanación comienza cuando te permites recibir." - Anónimo</p>
+    </section>
+
+    <section id="terapias">
+        <h2>Terapias</h2>
+        <p>Mis sesiones de Reiki están diseñadas para adaptarse a las necesidades de cada persona. En un ambiente tranquilo y seguro, comenzarás con una breve conversación para identificar lo que te gustaría trabajar: ya sea estrés, ansiedad, dolor físico o simplemente un deseo de encontrar equilibrio. Durante la terapia, te recostarás cómodamente mientras canalizo la energía sanadora hacia tu cuerpo. No hay contacto físico, solo la transmisión de energía a través de las manos, lo que permite desbloquear cualquier bloqueo energético y restaurar el flujo natural.</p>
+        <p class="quote">"El bienestar es un estado de armonía entre el cuerpo, la mente y el espíritu." - Anónimo</p>
+    </section>
+
+    <section id="sobre-mi">
+        <h2>Sobre mí</h2>
+        <p>Soy [Tu Nombre], terapeuta de Reiki y apasionada por el poder sanador de la energía. Desde hace años, el Reiki ha sido una herramienta transformadora en mi vida, ayudándome a encontrar el equilibrio, la serenidad y la conexión con mi esencia interior. Esta experiencia me ha llevado a querer compartir los beneficios de esta técnica milenaria con los demás.</p>
+    </section>
+
+    <section id="galeria">
+        <h2>Galería de Reiki</h2>
+        <div class="image-gallery">
+            <img src="ruta-a-tu-imagen-1.jpg" alt="Descripción de la imagen 1" />
+            <img src="ruta-a-tu-imagen-2.jpg" alt="Descripción de la imagen 2" />
+            <img src="ruta-a-tu-imagen-3.jpg" alt="Descripción de la imagen 3" />
+            <!-- Agrega más imágenes según sea necesario -->
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Puedes ponerte en contacto conmigo a través de [tu correo electrónico] para más información sobre las terapias y consultas.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 El Portal de la Luz. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
